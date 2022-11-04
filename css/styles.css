@@ -87,9 +87,16 @@ h6 {
   color: var(--title-text-color);
 }
 
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
 /*Header*/
 
-.page-header {
+.header {
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -107,7 +114,7 @@ h6 {
 }
 
 .logo {
-  color: var(--logo-text);
+  color: var(--accent-color);
 
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -116,12 +123,13 @@ h6 {
   text-decoration: none;
 }
 
-.logo--accent {
-  color: var(--accent-color);
+.logo--dark {
+  color: var(--logo-text);
 }
 
 .nav__list {
   display: flex;
+  justify-content: center;
   align-items: center;
   column-gap: 50px;
 }
@@ -221,44 +229,44 @@ h6 {
   text-transform: uppercase;
 }
 
-.hero__button {
+.button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 32px;
+  width: 216px;
+  height: 50px;
 
-  background: var(--accent-color);
-  color: var(--white-color);
-  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
-  border: 1px solid transparent;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background: var(--accent-color);
+  border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   transition: background-color var(--timing-function) var(--cubic-hover);
 }
 
-.hero__button:hover,
-.hero__button:focus {
+.button:hover,
+.button:focus {
   background-color: var(--btn-bgc-hover);
 }
 
 /*Section Наші переваги*/
 
-.advanteg-list {
+.advanteg__list {
   display: flex;
   justify-content: center;
   column-gap: 30px;
 }
 
-.advanteg-item {
+.advanteg__item {
   width: calc((100% - 90px) / 4);
 }
 
-.advanteg-img {
+.advanteg__img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +277,7 @@ h6 {
   border-radius: 4px;
 }
 
-.advanteg-title {
+.advanteg__subtitle {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -278,37 +286,32 @@ h6 {
   text-transform: uppercase;
 }
 
-.advanteg-text {
+.advanteg__text {
   font-size: 14px;
   line-height: 1.71;
 }
 
 /*Section Чим ми займаємося*/
-.project-section {
+.project {
   padding-top: 0;
 }
-.project-title,
-.team-title {
+.project__title {
   margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
 }
 
-.project-list {
+.project__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   column-gap: 30px;
 }
 
-.project-item {
+.project__item {
   position: relative;
   width: calc((100%-60px) / 3);
 }
 
-.project-direction {
+.project__direction {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -319,7 +322,7 @@ h6 {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.project-direction-title {
+.project__subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -330,13 +333,17 @@ h6 {
 }
 /*Section Наша команда*/
 
-.team-section {
+.team {
   background-color: var(--ligth-brg-color);
   text-align: center;
   line-height: 1.19;
 }
 
-.team-list {
+.team__title {
+  margin-bottom: 50px;
+}
+
+.team__list {
   display: flex;
   justify-content: center;
   column-gap: 30px;
@@ -356,13 +363,13 @@ h6 {
   padding-bottom: 30px;
   font-size: 16px;
 }
-.team-item .subtitle {
+.team-card__subtitle {
   margin-bottom: 10px;
   font-size: inherit;
   font-weight: 500;
 }
 
-.team-card .text {
+.team-card__text {
   margin-bottom: 16px;
 }
 
@@ -382,8 +389,11 @@ h6 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: var(--icon-color);
   transition: background-color var(--timing-function) var(--cubic-hover);
+}
+
+.social-link__icon {
+  fill: var(--icon-color);
 }
 
 .social-link:hover,
@@ -391,32 +401,29 @@ h6 {
   background-color: var(--accent-color);
 }
 
-.social-icon {
+.social-link__icon {
   transition: fill var(--timing-function) var(--cubic-hover);
 }
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
+
+.social-link:hover .social-link__icon,
+.social-link:focus .social-link__icon {
   fill: var(--white-color);
 }
 
 /*Постійні клієнти*/
 
-.clients-title {
+.clients__title {
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 30px;
 }
 
-.clients-item {
+.clients__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,7 +431,7 @@ h6 {
   height: 92px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,7 +442,7 @@ h6 {
   transition: border var(--timing-function) var(--cubic-hover);
 }
 
-.clients-icon {
+.clients__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,13 +451,13 @@ h6 {
   transition: fill var(--timing-function) var(--cubic-hover);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border: 1px solid var(--accent-color);
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
   fill: var(--accent-color);
 }
 
@@ -551,58 +558,49 @@ h6 {
 
 /*footer*/
 
-.footer-page {
+.footer {
   background-color: var(--dark-bgr-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.footer-page .logo {
-  display: block;
-  margin-bottom: 20px;
-
-  color: var(--white-color);
-}
-.link-adress {
-  margin-bottom: 9px;
-}
-
-.link-adress > .link {
-  color: var(--white-color);
-  transition: color var(--timing-function) var(--cubic-hover);
-}
-
-.link-contact:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.link-contact > .link {
-  color: var(--adress-text-color);
-  transition: color var(--timing-function) var(--cubic-hover);
-}
-
-.footer-page,
-.link-adress,
-.link-contact {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.link-adress > .link:hover,
-.link-adress > .link:focus,
-.link-contact > .link:hover,
-.link-contact > .link:focus {
-  color: var(--accent-color);
-}
-
-.footer-section {
+.footer__section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.join-title {
+.logo--white {
+  color: var(--white-color);
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--adress-text-color);
+  transition: color var(--timing-function) var(--cubic-hover);
+}
+
+.address__link--map {
+  color: var(--white-color);
+}
+
+.address__link:hover,
+.address__link:focus {
+  color: var(--accent-color);
+}
+
+.footer__title {
   margin-bottom: 20px;
   color: var(--white-color);
   font-weight: 700;
@@ -611,31 +609,13 @@ h6 {
   text-transform: uppercase;
 }
 
-.footer-social-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 10px;
-}
-
-.footer-social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.social-link--footer {
   fill: var(--white-color);
   background: rgba(255, 255, 255, 0.1);
   transition: background-color var(--timing-function) var(--cubic-hover);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: var(--accent-color);
-}
-
-.footer-form {
+.footer__form {
   display: flex;
   align-items: flex-end;
 }
@@ -644,15 +624,6 @@ h6 {
   display: flex;
   flex-direction: column;
   margin-right: 12px;
-}
-
-.footer-lable {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--white-color);
-  text-transform: uppercase;
 }
 
 .footer-input {
@@ -664,32 +635,13 @@ h6 {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-button {
   width: 200px;
-  height: 50px;
-  border-radius: 4px;
-  border: none;
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.06em;
-  color: var(--white-color);
-  cursor: pointer;
-  transition: background-color var(--timing-function) var(--cubic-hover);
 }
 
 .icon-telegram {
   margin-left: 10px;
   fill: currentColor;
-}
-
-.footer-btn:hover,
-.footer-btn:focus {
-  background-color: var(--btn-bgc-hover);
 }
 
 /*Modal*/
