@@ -433,11 +433,11 @@
             </ul>
           </div>
           <form class="footer__form" name="subscription">
-            <div class="subscription-form">
+            <div class="footer__subscription-form">
               <label class="footer__title" for="email">Підпишіться на розсилку</label>
               <input
                 type="email"
-                class="footer-input"
+                class="footer__input"
                 name="email"
                 id="email"
                 placeholder="E-mail"
@@ -455,54 +455,54 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-modal" data-modal-close type="button">
-          <svg class="icon-close" width="11px" hight="11px">
+        <button class="modal__close" data-modal-close type="button">
+          <svg class="modal__icon-close" width="11px" hight="11px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-        <form class="contact-form" name="contact-form" autocomplete="on">
-          <label class="form-lable" for="username">Ім'я</label>
+        <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="form" name="contact-form" autocomplete="on">
+          <label class="form__lable" for="username">Ім'я</label>
           <div class="form-control">
-            <input class="form-input" type="text" name="username" id="username" />
-            <svg class="form-icon" width="18px" height="18px">
+            <input class="form__input" type="text" name="username" id="username" />
+            <svg class="form__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
-          <label class="form-lable" for="tel">Телефон</label>
+          <label class="form__lable" for="tel">Телефон</label>
           <div class="form-control">
-            <input class="form-input" type="tel" name="tel" id="tel" />
-            <svg class="form-icon" width="18px" height="18px">
+            <input class="form__input" type="tel" name="tel" id="tel" />
+            <svg class="form__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-phone_modal"></use>
             </svg>
           </div>
-          <label class="form-lable" for="form-email">Пошта</label>
+          <label class="form__lable" for="form-email">Пошта</label>
           <div class="form-control">
-            <input class="form-input" type="email" name="form-email" id="form-email" />
-            <svg class="form-icon" width="18px" height="18px">
+            <input class="form__input" type="email" name="form-email" id="form-email" />
+            <svg class="form__icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email_modal"></use>
             </svg>
           </div>
-          <label class="form-lable" for="comments">Коментар </label>
+          <label class="form__lable" for="comments">Коментар </label>
           <textarea
-            class="form-comments"
+            class="form__comments"
             name="comments"
             id="comments"
             placeholder="Введіть текст"
           ></textarea>
 
-          <label class="form-lable-check" for="checkbox"
+          <label class="form__lable-check" for="checkbox"
             ><input
-              class="form-checkbox visually-hidden"
+              class="form__checkbox visually-hidden"
               id="checkbox"
               type="checkbox"
               name="agreement"
               value="yes"
             />
-            <span class="icon-check"></span> Погоджуюся з розсилкою та приймаю
-            <a class="form-link" href="#">Умови договору</a>
+            <span class="icon__check"></span> Погоджуюся з розсилкою та приймаю
+            <a class="form__link" href="#">Умови договору</a>
           </label>
-          <button class="form-btn" type="submit">Відправити</button>
+          <button class="button button__form" type="submit">Відправити</button>
         </form>
       </div>
     </div>
