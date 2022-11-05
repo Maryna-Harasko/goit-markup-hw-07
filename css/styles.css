@@ -348,6 +348,7 @@ h6 {
 .team__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   column-gap: 30px;
 }
 
@@ -465,14 +466,14 @@ h6 {
 
 /*Страница портфоліо*/
 
-.button-list {
+.portfolio__button-list {
   display: flex;
   justify-content: center;
   column-gap: 8px;
   margin-bottom: 50px;
 }
 
-.portfolio-button {
+.portfolio__button {
   display: block;
   padding: 6px 12px;
 
@@ -493,8 +494,8 @@ h6 {
     box-shadow var(--timing-function) var(--cubic-hover);
 }
 
-.portfolio-button:hover,
-.portfolio-button:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -503,11 +504,13 @@ h6 {
 
 .portfolio-card {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.portfolio-list {
+.portfolio-card__item {
   width: calc((100% - 60px) / 3);
 }
 
@@ -516,7 +519,7 @@ h6 {
   overflow: hidden;
 }
 
-.portfolio-thumb {
+.portfolio-backdrop__thumb {
   position: absolute;
   top: 0;
   left: 0;
@@ -528,23 +531,23 @@ h6 {
   transition: transform var(--timing-function) var(--cubic-hover);
 }
 
-.portfolio-list:hover .portfolio-thumb {
+.portfolio-card__item:hover .portfolio-backdrop__thumb {
   opacity: 1;
   transform: translateY(0);
 }
 
-.portfolio-text-thumb {
+.portfolio-backdrop__text {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white-color);
 }
 
-.card-text {
+.portfolio-card__wrap {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
 }
-.portfolio-title {
+.portfolio-card__title {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -553,7 +556,7 @@ h6 {
   letter-spacing: 0.06em;
 }
 
-.portfolio-text {
+.portfolio-card__text {
   font-size: 16px;
   line-height: 1.89;
 }
