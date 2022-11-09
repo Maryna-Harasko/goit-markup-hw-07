@@ -10,7 +10,7 @@
 
   &__wrap {
     padding: 20px 24px;
-    @include border(getColor('border'));
+    border: 1px solid getColor('border');
   }
 
   &__title {

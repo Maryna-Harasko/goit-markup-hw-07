@@ -56,7 +56,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-@mixin border ($type: 1px, $color){
-  border: $type solid $color;
-}

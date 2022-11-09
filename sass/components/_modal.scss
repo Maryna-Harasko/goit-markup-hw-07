@@ -27,7 +27,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  @include border(getColor('border-close-modal'));
+  border: 1px solid getColor('border-close-modal');
   background-color: getColor('primary-bgr');
   cursor: pointer;
 }
@@ -67,7 +67,7 @@
   padding: 12px 12px 12px 42px;
   width: 100%;
   height: 40px;
-  @include border(getColor('input-border'));
+  border: 1px solid getColor('input-border');
   border-radius: 4px;
   outline: none;
   cursor: pointer;
@@ -102,7 +102,7 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  @include border(getColor('input-border'));
+  border: 1px solid getColor('input-border');
   border-radius: 4px;
   outline: none;
   cursor: pointer;
@@ -129,7 +129,7 @@
   display: inline-block;
   width: 16px;
   height: 15px;
-  @include border($type: 2px getColor('title-text'));
+  border: 2px solid getColor('title-text');
   border-radius: 2px;
   transition: border-color $timing-function $cubic-hover,
     background-color $timing-function $cubic-hover;
