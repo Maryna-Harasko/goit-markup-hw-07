@@ -1,0 +1,84 @@
+$colors: (
+    'primary-text': #757575,
+    'title-text': #212121,
+    'adress-text': rgba(255, 255, 255, 0.6),
+    'white-text': #ffffff,
+    'accent': #2196f3,
+    'logo-text': #000000,
+    'form-comments-text': rgba(117, 117, 117, 0.5),
+    'primary-bgr': #ffffff,
+    'dark-bgr': #2f303a,
+    'ligth-brg': #f5f4fa,
+    'bgc-hero': #c4c4c4,
+    'bgc-backdrop': rgba(0, 0, 0, 0.2),
+    'icon-color': #afb1b8,
+    'btn-bgc-hover': #188ce8,
+    'portfolio-overlay': rgba(33, 150, 243, 0.9),
+    'bgc-icon-footer': rgba(255, 255, 255, 0.1),
+    'footer-border-input': rgba(255, 255, 255, 0.3),
+    'border': #eeeeee,    
+    'input-border': rgba(33, 33, 33, 0.2),
+    'border-close-modal': rgba(0, 0, 0, 0.1),
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: getColor('title-text');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    @extend %margin-padding-reset;
+}
+
+$cubic-hover: cubic-bezier(0.4, 0, 0.2, 1);
+
+$timing-function: 250ms;
+
+body {
+    color: getColor('primary-text');
+    background-color: getColor('primary-bgr');
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: getColor('title-text');
+}
+
+img {
+    display: block;
+}

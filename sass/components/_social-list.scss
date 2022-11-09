@@ -1,0 +1,31 @@
+.social-list {
+  @extend %list;
+  @include flexCenter();
+  column-gap: 10px;
+}
+
+.social-link {
+  @include link();
+  @include social-link();
+
+  &:hover,
+  &:focus {
+    background-color: getColor('accent');
+  }
+
+  &_grey {
+    fill: getColor('white-text');
+    background-color: getColor('bgc-icon-footer');
+    transition: background-color $timing-function $cubic-hover;
+  }
+}
+
+.social-link__icon {
+  fill: getColor('icon-color');
+  transition: fill $timing-function $cubic-hover;
+
+  .social-link:hover &,
+  .social-link:focus & {
+    fill: getColor('white-text');
+  }
+}
