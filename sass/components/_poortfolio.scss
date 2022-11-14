@@ -30,6 +30,8 @@
 
 .portfolio-link {
   @include link();
+
+  
 }
 
 .portfolio-backdrop {
@@ -48,10 +50,11 @@
   transform: translateY(100%);
   transition: transform $timing-function $cubic-hover;
 
-  .portfolio-card__item:hover & {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.portfolio-link:hover &,
+.portfolio-link:focus & {
+  opacity: 1;
+  transform: translateY(0);
+}
 
   &__text {
     font-size: 18px;
